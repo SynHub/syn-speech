@@ -18,4 +18,4 @@ You can find basic tutorials and more information regarding `Syn.Speech` [here](
 
 ## License
 
-Redistribution and use in source and binary forms must retain a copy of the [License](license.md).
+Redistribution and use in source and binary forms must retain a copy of the [License](https://github.com/SynHub/syn-speech/blob/master/LICENSE.md).
