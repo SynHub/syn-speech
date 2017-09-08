@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>        
+
+    <property name="absoluteBeamWidth"  value="10000"/>
+    <property name="relativeBeamWidth"  value="1E-80"/>
+    <property name="absoluteWordBeamWidth" value="100"/>
+    <property name="relativeWordBeamWidth" value="1E-60"/>
+    <property name="wordInsertionProbability" value="0.2"/>
+    <property name="languageWeight" value="7.0"/>
+    <property name="silenceInsertionProbability" value=".1"/>
+    <property name="frontend" value="mfcFrontEnd"/>
+    <property name="recognizer" value="recognizer"/>
+    <property name="showCreations" value="false"/>
+    <property name="keepAllTokens" value="false"/>
+    
+    <component name="recognizer" type="Syn.Speech.Recognizers.Recognizer">
+        <property name="decoder" value="decoder"/>
+        <propertylist name="monitors">
+            <item>accuracyTracker </item>
+            <item>speedTracker </item>
+            <item>memoryTracker </item>
+            <item>recognizerMonitor </item>
+        </propertylist>
+    </component>
+
+    <component name="decoder" type="Syn.Speech.Decoders.Decoder">
+        <property name="searchManager" value="wordPruningSearchManager"/>
+        <property name="featureBlockSize" value="50"/>
+    </component>
+    
+    <component name="wordPruningSearchManager" 
+    type="Syn.Speech.Decoders.Search.WordPruningBreadthFirstSearchManager">
+        <property name="linguist" value="lexTreeLinguist"/>
+        <property name="pruner" value="trivialPruner"/>
+        <property name="scorer" value="scorer"/>
+        <property name="activeListManager" value="activeListManager"/>
+        <property name="growSkipInterval" value="0"/>
+        <property name="checkStateOrder" value="false"/>
+        <property name="buildWordLattice" value="true"/>
+        <property name="acousticLookaheadFrames" value="1.7"/>
+        <property name="relativeBeamWidth" value="${relativeBeamWidth}"/>
+	<property name="keepAllTokens" value="${keepAllTokens}"/>
+    </component>
+
+    <component name="activeList"
+        type="Syn.Speech.Decoders.Search.PartitionActiveListFactory">
+	<property name="absoluteBeamWidth" value="${absoluteBeamWidth}"/>
+	<property name="relativeBeamWidth" value="${relativeBeamWidth}"/>
+    </component>
+    
+    <component name="activeListManager" 
+             type="Syn.Speech.Decoders.Search.SimpleActiveListManager">
+        <propertylist name="activeListFactories">
+	    <item>standardActiveListFactory</item>
+	    <item>wordActiveListFactory</item>
+	    <item>wordActiveListFactory</item>
+	    <item>standardActiveListFactory</item>
+	    <item>standardActiveListFactory</item>
+	    <item>standardActiveListFactory</item>
+	</propertylist>
+    </component>
+    
+    <component name="standardActiveListFactory" 
+               type="Syn.Speech.Decoders.Search.PartitionActiveListFactory">
+        <property name="absoluteBeamWidth" value="${absoluteBeamWidth}"/>
+        <property name="relativeBeamWidth" value="${relativeBeamWidth}"/>
+    </component>
+    
+    <component name="wordActiveListFactory" 
+               type="Syn.Speech.Decoders.Search.PartitionActiveListFactory">
+        <property name="absoluteBeamWidth" value="${absoluteWordBeamWidth}"/>
+        <property name="relativeBeamWidth" value="${relativeWordBeamWidth}"/>
+    </component>
+    
+    <component name="trivialPruner" 
+               type="Syn.Speech.Decoders.Pruner.SimplePruner"/>
+    
+    <component name="scorer" 
+               type="Syn.Speech.Decoders.Scorer.SimpleAcousticScorer">
+        <property name="frontend" value="${frontend}"/>
+    </component>
+    
+    <component name="lexTreeLinguist" 
+               type="Syn.Speech.Linguist.LexTree.LexTreeLinguist">
+        <property name="acousticModel" value="acousticModel"/>
+        <property name="languageModel" value="trigramModel"/>
+        <property name="dictionary" value="dictionary"/>
+        <property name="addFillerWords" value="false"/>
+        <property name="fillerInsertionProbability" value="1E-10"/>
+        <property name="generateUnitStates" value="false"/>
+        <property name="wantUnigramSmear" value="true"/>
+        <property name="unigramSmearWeight" value="1"/>
+        <property name="wordInsertionProbability" 
+                value="${wordInsertionProbability}"/>
+        <property name="silenceInsertionProbability" 
+                value="${silenceInsertionProbability}"/>
+        <property name="languageWeight" value="${languageWeight}"/>
+        <property name="unitManager" value="unitManager"/>
+    </component>    
+    
+    <component name="dictionary" 
+        type="Syn.Speech.Linguist.Dictionary.TextDictionary">
+        <property name="dictionaryPath"
+                  value="./cmudict-en-us.dict"/>
+        <property name="fillerPath" 
+	          value="./noisedict"/>
+        <property name="addSilEndingPronunciation" value="false"/>
+        <property name="wordReplacement" value="&lt;sil&gt;"/>
+        <property name="unitManager" value="unitManager"/>
+    </component>
+
+    <component name="trigramModel" 
+               type="Syn.Speech.Linguist.Language.NGram.SimpleNGramModel">
+        <property name="location" value=""/>
+        <property name="dictionary" value="dictionary"/>
+        <property name="maxDepth" value="3"/>
+        <property name="unigramWeight" value=".7"/>
+    </component>
+    
+    <component name="acousticModel"
+               type="Syn.Speech.Linguist.Acoustic.Tiedstate.TiedStateAcousticModel">
+        <property name="loader" value="loader"/>
+        <property name="unitManager" value="unitManager"/>
+    </component>
+
+    <component name="loader" type="Syn.Speech.Linguist.Acoustic.Tiedstate.Sphinx3Loader">
+        <property name="unitManager" value="unitManager"/>
+        <property name="location" value="./Models"/>
+    </component>
+
+    <component name="unitManager" 
+               type="Syn.Speech.Linguist.Acoustic.UnitManager"/>
+    
+    <component name="mfcFrontEnd" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>streamDataSource </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+            <item>fft </item>
+            <item>melFilterBank </item>
+            <item>dct </item>
+            <item>batchCMN </item>
+            <item>featureExtraction </item>
+        </propertylist>
+    </component>
+
+    <component name="streamDataSource"
+               type="Syn.Speech.FrontEnds.Util.StreamDataSource">
+	<property name="bigEndianData" value="false"/>
+    </component>
+        
+    <component name="speechClassifier" 
+                type="Syn.Speech.FrontEnds.EndPoint.SpeechClassifier">
+    </component>
+    
+    <component name="speechMarker" 
+                type="Syn.Speech.FrontEnds.EndPoint.SpeechMarker">
+        <property name="speechTrailer" value="50"/>
+    </component>
+    
+    <component name="preemphasizer"
+		type="Syn.Speech.FrontEnds.Filter.Preemphasizer"/>
+    
+    <component name="windower" 
+	type="Syn.Speech.FrontEnds.Window.RaisedCosineWindower"/>
+    
+    <component name="fft" 
+        type="Syn.Speech.FrontEnds.Transform.DiscreteFourierTransform"/>
+    
+    <component name="melFilterBank" 
+        type="Syn.Speech.FrontEnds.FrequencyWrap.MelFrequencyFilterBank"/>
+    
+    <component name="dct" 
+            type="Syn.Speech.FrontEnds.Transform.DiscreteCosineTransform"/>
+    
+    <component name="liveCMN" 
+                type="Syn.Speech.FrontEnds.Feature.LiveCMN"/>
+
+    <component name="batchCMN" 
+                type="Syn.Speech.FrontEnds.Feature.BatchCMN"/>
+    
+    <component name="featureExtraction" 
+		type="Syn.Speech.FrontEnds.Feature.DeltasFeatureExtractor"/>
+    
+    <component name="accuracyTracker" 
+               type="Syn.Speech.Instrumentation.BestPathAccuracyTracker">
+        <property name="recognizer" value="${recognizer}"/>
+        <property name="showRawResults" value="false"/>
+        <property name="showAlignedResults" value="false"/>
+    </component>
+    
+    <component name="memoryTracker" 
+               type="Syn.Speech.Instrumentation.MemoryTracker">
+        <property name="recognizer" value="${recognizer}"/>
+	<property name="showDetails" value="false"/>
+	<property name="showSummary" value="false"/>
+    </component>
+    
+    <component name="speedTracker" 
+               type="Syn.Speech.Instrumentation.SpeedTracker">
+        <property name="recognizer" value="${recognizer}"/>
+        <property name="frontend" value="${frontend}"/>
+	<property name="showDetails" value="false"/>
+    </component>
+    
+    <component name="recognizerMonitor" 
+               type="Syn.Speech.Instrumentation.RecognizerMonitor">
+        <property name="recognizer" value="${recognizer}"/>
+        <propertylist name="allocatedMonitors">
+            <item>configMonitor </item>
+        </propertylist>
+    </component>
+    
+    <component name="configMonitor" 
+               type="Syn.Speech.Instrumentation.ConfigMonitor">
+        <property name="showConfig" value="false"/>
+    </component>
+
+</config>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Linguist.LexTree.Node">
+    <Position X="1" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="dumpNodeInfo" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAEAAggEAIAAAAIAADAAAAAABAAAQgASAQA=</HashCode>
+      <FileName>LexTree\Node.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.UnitNode">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="FILLER_UNIT" Hidden="true" />
+      <Field Name="SILENCE_UNIT" Hidden="true" />
+      <Field Name="SIMPLE_UNIT" Hidden="true" />
+      <Field Name="WORD_BEGINNING_UNIT" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Linguist.LexTree.Node" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.071" Y="0.5" />
+        <Point X="2.071" Y="0.251" />
+        <Point X="6.5" Y="0.251" />
+        <Point X="6.5" Y="0.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>MAAAoAAAAAAAAAAABAAQAAAAAAABAAAAAQAAAAAAIAA=</HashCode>
+      <FileName>LexTree\UnitNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.WordNode">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAJAiEABAAAAAAABEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LexTree\WordNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.InitialWordNode">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LexTree\InitialWordNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="parent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Linguist.LexTree.HMMNode">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAgIAAAAAEACAAEBAAQAAAAAAAAABAAAAAAAgAAAAA=</HashCode>
+      <FileName>LexTree\HMMNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.EndNode">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAAAUBAAUAAAAAAAAAAAAAAAAAgAAAAQ=</HashCode>
+      <FileName>LexTree\EndNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.EntryPoint">
+    <Position X="7.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAADQAAQAAAEAAABBABAABCAAAgEYAhA=</HashCode>
+      <FileName>LexTree\EntryPoint.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="baseNode" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Linguist.LexTree.EntryPointTable">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAABAAgCAABA=</HashCode>
+      <FileName>LexTree\EntryPointTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.HMMTree">
+    <Position X="16.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>A0EAQggACAAAgAIAAACAAQAEEEAAAAQEAAUAIwmAABA=</HashCode>
+      <FileName>LexTree\HMMTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeLinguist">
+    <Position X="10.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBUELAAWOUgBZAMBQEAAIAAlFEykCASABRQAMAAAIIQ=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeState" Collapsed="true">
+    <Position X="7" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQoAEAAEAAABAAhEgMBAgAEQEAAEABBEAIAiAAAECIE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeEndUnitState" Collapsed="true">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAAAAAAAAgEgIAAAAAAAAAAgAAABIAAAAQAAAE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeUnitState" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAAAIAAAAAAhEgIAAAAAQAAAAAAAABIAgAAQAAAE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeHMMState" Collapsed="true">
+    <Position X="7.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAgGgIAAAAEQAAIIAACABIAgAAQAAAE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeNonEmittingHMMState" Collapsed="true">
+    <Position X="4.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeWordState" Collapsed="true">
+    <Position X="2.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAAAAAAAAAAAgAgAAAgAAQAAEAAAAABIAAABAAAAE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeEndWordState" Collapsed="true">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Linguist.LexTree.LexTreeSearchGraph">
+    <Position X="10.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>LexTree\LexTreeLinguist.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

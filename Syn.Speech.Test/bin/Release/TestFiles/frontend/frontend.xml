@@ -1,0 +1,136 @@
+<config>
+
+    <component name="preempTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+        </propertylist>
+    </component>
+
+    <component name="windowTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+        </propertylist>
+    </component>
+
+    <component name="fftTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+            <item>fft </item>
+        </propertylist>
+    </component>
+
+    <component name="melTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+            <item>fft </item>
+            <item>melFilterBank </item>
+        </propertylist>
+    </component>
+
+    <component name="dctTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+            <item>fft </item>
+            <item>melFilterBank </item>
+            <item>dct </item>
+        </propertylist>
+    </component>
+
+    <component name="cmnTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+            <item>fft </item>
+            <item>melFilterBank </item>
+            <item>dct </item>
+            <item>liveCMN </item>
+        </propertylist>
+    </component>
+
+    <component name="feTest" type="Syn.Speech.FrontEnds.FrontEnd">
+        <propertylist name="pipeline">
+            <item>audioFileDataSource </item>
+            <item>dataBlocker </item>
+            <item>speechClassifier </item>
+            <item>speechMarker </item>
+            <item>preemphasizer </item>
+            <item>windower </item>
+            <item>fft </item>
+            <item>melFilterBank </item>
+            <item>dct </item>
+            <item>liveCMN </item>
+            <item>featureExtraction </item>
+        </propertylist>
+    </component>
+
+    <component name="audioFileDataSource" type="Syn.Speech.FrontEnds.Util.AudioFileDataSource"/>
+
+    <component name="microphone" 
+                type="Syn.Speech.FrontEnds.Util.Microphone">
+        <property name="closeBetweenUtterances" value="false"/>
+    </component>
+
+    <component name="dataBlocker" type="Syn.Speech.FrontEnds.DataBlocker"/>
+
+    <component name="speechClassifier"
+                type="Syn.Speech.FrontEnds.EndPoint.SpeechClassifier">
+        <property name="threshold" value="13"/>
+    </component>
+    
+    <component name="speechMarker" 
+                type="Syn.Speech.FrontEnds.EndPoint.SpeechMarker">
+    </component>
+    
+    <component name="preemphasizer"
+		type="Syn.Speech.FrontEnds.Filter.Preemphasizer"/>
+
+    <component name="dataDumper"
+		type="Syn.Speech.FrontEnds.Util.DataDumper"/>
+    
+    <component name="windower" 
+	type="Syn.Speech.FrontEnds.Window.RaisedCosineWindower"/>
+    
+    <component name="fft" 
+        type="Syn.Speech.FrontEnds.Transform.DiscreteFourierTransform"/>
+    
+    <component name="melFilterBank" 
+        type="Syn.Speech.FrontEnds.FrequencyWarp.MelFrequencyFilterBank"/>
+    
+    <component name="dct" 
+            type="Syn.Speech.FrontEnds.Transform.DiscreteCosineTransform"/>
+    
+    <component name="liveCMN" 
+                type="Syn.Speech.FrontEnds.Feature.LiveCMN"/>
+    
+    <component name="featureExtraction" 
+		type="Syn.Speech.FrontEnds.Feature.DeltasFeatureExtractor"/>
+
+</config>

@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A21C2EB3-A1AC-472D-BA60-FE86015E7BE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FrontEnd</RootNamespace>
+    <AssemblyName>FrontEnd</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCepstrum.cs" />
+    <Compile Include="BaseDataProcessor.cs" />
+    <Compile Include="DataBlocker.cs" />
+    <Compile Include="DataEndSignal.cs" />
+    <Compile Include="DataStartSignal.cs" />
+    <Compile Include="Denoise\Denoise.cs" />
+    <Compile Include="DoubleData.cs" />
+    <Compile Include="EndPoint\AbstractVoiceActivityDetector.cs" />
+    <Compile Include="EndPoint\NonSpeechDataFilter.cs" />
+    <Compile Include="EndPoint\SpeechClassifiedData.cs" />
+    <Compile Include="EndPoint\SpeechClassifier.cs" />
+    <Compile Include="EndPoint\SpeechMarker.cs" />
+    <Compile Include="Feature\AbstractFeatureExtractor.cs" />
+    <Compile Include="Feature\BatchCMN.cs" />
+    <Compile Include="Feature\DeltasFeatureExtractor.cs" />
+    <Compile Include="Feature\FeatureTransform.cs" />
+    <Compile Include="Feature\LiveCMN.cs" />
+    <Compile Include="Filter\Preemphasizer.cs" />
+    <Compile Include="FloatData.cs" />
+    <Compile Include="Frequencywarp\MelFilter.cs" />
+    <Compile Include="Frequencywarp\MelFrequencyFilterBank.cs" />
+    <Compile Include="FrontEnd.cs" />
+    <Compile Include="Gui\VolumeControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\VolumeControl.Designer.cs">
+      <DependentUpon>VolumeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDataProcessor.cs" />
+    <Compile Include="ISignalListener.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal.cs" />
+    <Compile Include="SpeechEndSignal.cs" />
+    <Compile Include="SpeechStartSignal.cs" />
+    <Compile Include="Transform\DiscreteCosineTransform.cs" />
+    <Compile Include="Transform\DiscreteFourierTransform.cs" />
+    <Compile Include="Transform\Lifter.cs" />
+    <Compile Include="Util\DataUtil.cs" />
+    <Compile Include="Util\StreamCepstrumSource.cs" />
+    <Compile Include="Util\StreamDataSource.cs" />
+    <Compile Include="Window\RaisedCosineWindower.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{92d02510-2296-4a57-ae2c-255f755e65b6}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{3ce3dfcb-4fc0-45cd-b306-394368341693}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FrontEnd.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Gui\VolumeControl.resx">
+      <DependentUpon>VolumeControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

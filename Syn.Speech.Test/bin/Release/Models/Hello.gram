@@ -1,0 +1,3 @@
+#JSGF V1.0;
+grammar hello;
+public <command> = ( the time is now exactly twenty five to one | there's three left on the left side the one closest to us );

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A4E8087-CE6C-4E88-AD71-ADBEBE90F7D8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Syn.Speech.Test</RootNamespace>
+    <AssemblyName>Syn.Speech.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Syn.Speech.Test.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syn.Bot">
+      <HintPath>..\packages\SynBot.1.0.81\lib\portable-net45+sl5+wp8+win8\Syn.Bot.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="Alignment\TextAlignerSmallTest.cs" />
+    <Compile Include="Alignment\TextAlignerLargeTest.cs" />
+    <Compile Include="Api\StreamSpeechRecognizerTest.cs" />
+    <Compile Include="Decoder\PartitionerTest.cs" />
+    <Compile Include="Decoder\ScorerTests.cs" />
+    <Compile Include="FrontEnds\DataBlockerTest.cs" />
+    <Compile Include="FrontEnds\SpeechMarkerTest.cs" />
+    <Compile Include="FrontEnds\AudioDataSourcesTest.cs" />
+    <Compile Include="FrontEnds\FrontEndElementTest.cs" />
+    <Compile Include="Fsts\RmEpsilonTest-INCOMPLETE.cs" />
+    <Compile Include="Fsts\ProjectTest.cs" />
+    <Compile Include="Fsts\NShortestPathsTest.cs" />
+    <Compile Include="Fsts\ComposeEpsilonTest.cs" />
+    <Compile Include="Fsts\ArcSortTest.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="Linguist\MixtureComponentTest.cs" />
+    <Compile Include="Linguist\LargeNGramTest.cs" />
+    <Compile Include="Linguist\FSTGrammarTest.cs" />
+    <Compile Include="Linguist\BatchForcedAlignerGrammarTest.cs" />
+    <Compile Include="Linguist\DynamicTrigramModelTest-INCOMPLETE.cs" />
+    <Compile Include="Linguist\NgramTrieTest.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Program2.cs" />
+    <Compile Include="Result\PosteriorTest.cs" />
+    <Compile Include="Result\LatticeIOTest.cs" />
+    <Compile Include="Util\AnotherDummyFrontEnd.cs" />
+    <Compile Include="Util\AnotherDummyProcessor.cs" />
+    <Compile Include="Util\DefaultComp.cs" />
+    <Compile Include="Util\DummyFrontEnd.cs" />
+    <Compile Include="Util\DummyFrontEndProcessor.cs" />
+    <Compile Include="Util\DummyProcessor.cs" />
+    <Compile Include="Alignment\SpeechAlignerTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dictionary\DictionaryTest.cs" />
+    <Compile Include="Linguist\WordSequenceTest.cs" />
+    <Compile Include="Util\ConfigurationManagerTest.cs" />
+    <Compile Include="Util\BandDetectorTest.cs" />
+    <Compile Include="Util\CMUTests.cs" />
+    <Compile Include="Util\ComponentListTests.cs" />
+    <Compile Include="Util\TestConfigurable.cs" />
+    <Compile Include="Util\ComponentPropertyTest.cs" />
+    <Compile Include="Alignment\UsEnglishWordExpanderTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Syn.Speech\Syn.Speech.csproj">
+      <Project>{65b865cf-cdbb-4b84-8bda-8a4af1dacfb9}</Project>
+      <Name>Syn.Speech</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

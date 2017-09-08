@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Decoder.AbstractDecoder" Collapsed="true">
+    <Position X="3.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAQIIAAAMAABAQAGAAAAAAAAAgAEEAJAAAAEAAAAAAI=</HashCode>
+      <FileName>AbstractDecoder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Decoder.Decoder">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAA=</HashCode>
+      <FileName>Decoder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Pruner.SimplePruner" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAwAAAAAEAAAAAAAAAAAAAAAAAAEAACAABAEAAAAAAA=</HashCode>
+      <FileName>Pruner\SimplePruner.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Decoder.Scorer.SimpleAcousticScorer" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIQAQAAAkAEAAQEAABABAEABAAAAAACAABAAAAAAEAA=</HashCode>
+      <FileName>Scorer\SimpleAcousticScorer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Decoder.Scorer.ThreadedAcousticScorer" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAQIAAEAAAAAAEAAAAAAAAQAEAAAIAAEABAAKAAAA=</HashCode>
+      <FileName>Scorer\ThreadedAcousticScorer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.ActiveList" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAEAAAAAAIAAhCCAEgIAAAAAAAAAAACCACA=</HashCode>
+      <FileName>Search\ActiveList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Decoder.Search.ActiveListFactory" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAEAAIAAAAAAAAAAoAAAEAIAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Search\ActiveListFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Decoder.Search.ActiveListManager" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAIAAAAAAIAACAAgAAAAAAAAIAACAAAAAAAIACAAA=</HashCode>
+      <FileName>Search\ActiveListManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Decoder.Search.AlternateHypothesisManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAQAAAAAAAgAAAAAAACACBAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Search\AlternateHypothesisManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Decoder.Search.DecoderResult" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAYAAQCDgAApAEIQDQIKQKAAACACoAkCAAQAAAgAAI=</HashCode>
+      <FileName>Search\DecoderResult.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Decoder.Search.PartitionActiveListFactory" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Search\PartitionActiveListFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.PartitionActiveList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIEEAAIEgAABAAIAABCCAAgIAAAAAAAAAAAIiACA=</HashCode>
+      <FileName>Search\PartitionActiveListFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Decoder.Search.Partitioner" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAIAAAAAEIAAFAIACAAAAA=</HashCode>
+      <FileName>Search\Partitioner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.SimpleActiveListManager" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAIAEAAAgAAACAggEAAAAACAIAACAAAAQAAJACAIA=</HashCode>
+      <FileName>Search\SimpleActiveListManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.SimpleBreadthFirstSearchManager" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZE4HEBIAHAABMEAFBAQobEmEEhAkCDKAIBIAIBBQAGE=</HashCode>
+      <FileName>Search\SimpleBreadthFirstSearchManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.SortingActiveListFactory" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Search\SortingActiveListFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.SortingActiveList" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIAEgAIEgAAAABIAABCCAAgIAAAAAAAAAAAAiACA=</HashCode>
+      <FileName>Search\SortingActiveListFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decoder.Search.Token" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBOSCIAQgAIwAAAGQRCDgAMyQDkgCADAJAAAwAgBCEE=</HashCode>
+      <FileName>Search\Token.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Decoder.Search.TokenSearchManager" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAABAAAAQBAAACAUAAAAAUAAACAQhAAAAAgABA=</HashCode>
+      <FileName>Search\TokenSearchManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Decoder.Search.WordPruningBreadthFirstSearchManager" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ZA6HWRKAHKABMAABAEQL5AkEggAGSBCAIBJAKQBQAGE=</HashCode>
+      <FileName>Search\WordPruningBreadthFirstSearchManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Decoder.IResultListener" Collapsed="true">
+    <Position X="11.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>IResultListener.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Decoder.IResultProducer" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAI=</HashCode>
+      <FileName>IResultProducer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Decoder.Pruner.IPruner" Collapsed="true">
+    <Position X="9.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAEAAAAAAAAAAAAAAAAAAAAACAABAAAAAAAAA=</HashCode>
+      <FileName>Pruner\IPruner.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Decoder.Scorer.IAcousticScorer" Collapsed="true">
+    <Position X="8" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAAAAAABAAAAAAAAAAAACAABAAAAAAAAA=</HashCode>
+      <FileName>Scorer\IAcousticScorer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Decoder.Scorer.IScoreable" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAgAAAAAAAAACAAAAAgAAAAAA=</HashCode>
+      <FileName>Scorer\IScoreable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Decoder.Scorer.IScoreNormalizer" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scorer\IScoreNormalizer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Decoder.Search.ISearchManager" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAAAAAAAAAAAQAAAAAAAAACAABAAAAAAAAA=</HashCode>
+      <FileName>Search\ISearchManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
