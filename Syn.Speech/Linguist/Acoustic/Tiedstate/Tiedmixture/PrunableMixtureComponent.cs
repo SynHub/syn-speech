@@ -1,4 +1,4 @@
-﻿using Syn.Logging;
+﻿using Syn.Speech.Logging;
 using Syn.Speech.Util;
 //REFACTORED
 namespace Syn.Speech.Linguist.Acoustic.Tiedstate.Tiedmixture

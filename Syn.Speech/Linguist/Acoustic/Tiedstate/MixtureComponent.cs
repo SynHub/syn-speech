@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.FrontEnds;
 using Syn.Speech.Helper;
 using Syn.Speech.Util;

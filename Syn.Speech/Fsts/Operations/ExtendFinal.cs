@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Syn.Logging;
+using Syn.Speech.Logging;
 
 //REFACTORED
 using Syn.Speech.Fsts.Semirings;

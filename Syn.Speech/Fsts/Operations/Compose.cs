@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Fsts.Semirings;
 using Syn.Speech.Fsts.Utils;
 using Syn.Speech.Helper;

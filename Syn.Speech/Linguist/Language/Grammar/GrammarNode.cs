@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Linguist.Dictionary;
 //REFACTORED
 namespace Syn.Speech.Linguist.Language.Grammar

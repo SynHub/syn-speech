@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Decoders.Pruner;
 using Syn.Speech.Decoders.Scorer;
 using Syn.Speech.Helper;

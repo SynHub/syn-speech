@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Helper;
 using Syn.Speech.Util;
 //PATROLLED

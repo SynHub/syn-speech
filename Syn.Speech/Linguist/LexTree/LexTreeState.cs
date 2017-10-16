@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Linguist.Acoustic;
 using Syn.Speech.Linguist.Dictionary;
 //PATROLLED + REFACTORED

@@ -47,9 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Syn.Logging\Syn.Logging\Logging\Logger.cs">
-      <Link>Logging\Logger.cs</Link>
-    </Compile>
     <Compile Include="Alignment\Alignment.cs" />
     <Compile Include="Alignment\Tokenizer\CharTokenizer.cs" />
     <Compile Include="Alignment\Tokenizer\DecisionTree.cs" />
@@ -452,6 +449,10 @@
     <Compile Include="Linguist\Linguist.cs" />
     <Compile Include="Linguist\Util\LRUCache.cs" />
     <Compile Include="Linguist\WordSequence.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Logging\LogReceivedEventArgs.cs" />
+    <Compile Include="Logging\LogType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -482,7 +483,6 @@
     <Compile Include="SpeakerId\SpeakerIdentification.cs" />
     <Compile Include="Tools\Bandwidth\BandDetector.cs" />
     <Compile Include="Tools\Batch\BatchModeRecognizer.cs" />
-    <Compile Include="Tools\Class1.cs" />
     <Compile Include="Trainer\Edge.cs" />
     <Compile Include="Trainer\Node.cs" />
     <Compile Include="Trainer\NodeType.cs" />

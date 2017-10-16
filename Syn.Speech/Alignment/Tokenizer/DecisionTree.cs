@@ -3,7 +3,7 @@ using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Helper;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Alignment.Tokenizer

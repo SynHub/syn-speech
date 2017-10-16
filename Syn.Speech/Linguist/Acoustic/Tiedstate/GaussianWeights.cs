@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using Syn.Logging;
+using Syn.Speech.Logging;
 //REFACTORED
 namespace Syn.Speech.Linguist.Acoustic.Tiedstate
 {

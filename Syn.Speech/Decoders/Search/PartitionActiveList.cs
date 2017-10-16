@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Helper;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Decoders.Search

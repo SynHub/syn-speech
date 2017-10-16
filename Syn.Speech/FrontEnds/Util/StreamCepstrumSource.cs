@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Helper;
 using Syn.Speech.Util;
 using Syn.Speech.Util.Props;

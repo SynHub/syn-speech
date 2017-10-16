@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.FrontEnds;
 using Syn.Speech.Helper;
 //REFACTORED

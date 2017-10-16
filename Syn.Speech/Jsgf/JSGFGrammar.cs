@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Helper;
 using Syn.Speech.Jsgf.Parser;
 using Syn.Speech.Jsgf.Rule;

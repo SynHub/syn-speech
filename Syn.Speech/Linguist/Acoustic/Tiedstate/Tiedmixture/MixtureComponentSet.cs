@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.FrontEnds;
 using Syn.Speech.Helper;
 using Syn.Speech.Linguist.Acoustic.Tiedstate.Tiedmixture.Comparer;

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Linguist.Dictionary;
+using Syn.Speech.Logging;
 using Syn.Speech.Util;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Linguist.Language.Grammar

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.FrontEnds;
 using Syn.Speech.Helper;
 using Syn.Speech.Recognizers;

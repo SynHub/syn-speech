@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Fsts.Semirings;
 using Syn.Speech.Helper;
 //REFACTORED

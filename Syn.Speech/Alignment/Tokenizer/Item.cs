@@ -1,5 +1,5 @@
 ﻿using System.Runtime.InteropServices;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Helper;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Alignment.Tokenizer

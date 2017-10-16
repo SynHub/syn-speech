@@ -1,4 +1,5 @@
-﻿using Syn.Logging;
+﻿using Syn.Speech.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Recognizers;
 using Syn.Speech.Results;
 using Syn.Speech.Util;

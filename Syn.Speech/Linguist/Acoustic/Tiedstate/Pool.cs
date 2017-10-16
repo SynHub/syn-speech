@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Syn.Logging;
+using Syn.Speech.Logging;
 //PATROLLED + REFACTORED
 using Syn.Speech.Helper;
 

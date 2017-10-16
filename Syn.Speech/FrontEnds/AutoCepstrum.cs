@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Text;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.FrontEnds.Denoises;
 using Syn.Speech.FrontEnds.FrequencyWarp;
 using Syn.Speech.FrontEnds.Transform;

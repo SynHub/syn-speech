@@ -1,5 +1,5 @@
 ﻿using System.Globalization;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.FrontEnds.EndPoint;
 using Syn.Speech.Util.Props;
 //PATROLLED + REFACTORED

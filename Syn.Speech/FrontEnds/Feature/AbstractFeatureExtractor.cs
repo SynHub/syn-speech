@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Syn.Logging;
+using Syn.Speech.Logging;
+using Syn.Speech.Api;
 using Syn.Speech.FrontEnds.EndPoint;
+using Syn.Speech.Logging;
 using Syn.Speech.Util.Props;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.FrontEnds.Feature

@@ -1,5 +1,5 @@
 ﻿using System;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Linguist.Acoustic;
 using Syn.Speech.Util;
 //REFACTORED

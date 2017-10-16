@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Decoders.Adaptation;
 using Syn.Speech.Helper;
 using Syn.Speech.Linguist.Acoustic.Tiedstate.Tiedmixture;

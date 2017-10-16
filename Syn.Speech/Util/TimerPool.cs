@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Syn.Logging;
+using Syn.Speech.Logging;
 //REFACTORED
 namespace Syn.Speech.Util
 {

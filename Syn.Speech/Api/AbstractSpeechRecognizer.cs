@@ -1,9 +1,8 @@
 ﻿using System;
-using Syn.Logging;
 using Syn.Speech.Decoders.Adaptation;
 using Syn.Speech.Linguist.Acoustic.Tiedstate;
+using Syn.Speech.Logging;
 using Syn.Speech.Recognizers;
-
 
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Api
@@ -26,7 +25,7 @@ namespace Syn.Speech.Api
         /// <param name="configuration"></param>
         public AbstractSpeechRecognizer(Configuration configuration):this(new Context(configuration))
         {
-
+           
         }
 
         protected AbstractSpeechRecognizer(Context context) 
@@ -74,7 +73,7 @@ namespace Syn.Speech.Api
             }
         }
 
-        public void LoadTransform(String path, int numClass)
+        public void LoadTransform(string path, int numClass)
         {
             try
             {

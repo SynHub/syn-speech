@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Numerics;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Util.Props;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.FrontEnds.Transform

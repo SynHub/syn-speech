@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using Syn.Logging;
+using Syn.Speech.Logging;
 using Syn.Speech.Alignment;
 using Syn.Speech.Helper;
 using Syn.Speech.Linguist.Language.Grammar;

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Syn.Logging;
+using Syn.Speech.Logging;
 
 //REFACTORED
 using Syn.Speech.Fsts.Semirings;

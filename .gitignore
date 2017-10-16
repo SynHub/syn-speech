@@ -1,9 +1,8 @@
+.vs/
 Syn.Speech.Test/obj/
 Syn.Speech/obj/
 packages/
 *.rar
-*.wav
-*.dmp
 Syn.Speech/Api/obj/
 Syn.Speech/Decoder/obj/
 Syn.Speech/Decoders/obj/
