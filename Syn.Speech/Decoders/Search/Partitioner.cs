@@ -173,7 +173,7 @@ namespace Syn.Speech.Decoders.Search
          */
         private static int SimplePointSelect(Token[] tokens, int start, int end, int targetSize) 
         {
-            Array.Sort(tokens, start, end + 1, new ScoreableComparator());
+            Array.Sort(tokens, start, (end + 1) - start, new ScoreableComparator());
             return start + targetSize - 1;
         }
 

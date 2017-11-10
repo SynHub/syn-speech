@@ -767,10 +767,11 @@ namespace Syn.Speech.Jsgf
                         break;
                     }
                     // Extract rule name
+                    var endIndex = rule.IndexOf('>', index + 1);
                     JSGFRuleName extractedRuleName = new JSGFRuleName(rule
-                            .Substring(index + 1, rule.IndexOf('>', index + 1))
+                            .Substring(index + 1, endIndex - (index + 1))
                             .Trim());
-                    index = rule.IndexOf('>', index) + 1;
+                    index = endIndex + 1;
 
                     // Check for full qualified rule name
                     if (extractedRuleName.GetFullGrammarName() != null)
