@@ -16,3 +16,5 @@ Syn.Speech/Instrumentation/obj/
 Syn.Speech/Linguist/obj/
 Syn.Speech/Recognizers/obj/
 Syn.Speech/Util/obj/
+Syn.Speech.Test/bin/
+Syn.Speech.Test/obj/
