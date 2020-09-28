@@ -18,3 +18,5 @@ Syn.Speech/Recognizers/obj/
 Syn.Speech/Util/obj/
 Syn.Speech.Test/bin/
 Syn.Speech.Test/obj/
+/Syn.Speech.Core/Api/obj
+/Syn.Speech.Core/obj
