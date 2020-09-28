@@ -1,9 +1,9 @@
-﻿using System;
-using System.IO;
-using Syn.Logging;
-using Syn.Speech.Api;
+﻿using Syn.Speech.Api;
 using Syn.Speech.FrontEnds.EndPoint;
+using Syn.Speech.Logging;
 using Syn.Speech.Util.Props;
+using System;
+using System.IO;
 
 namespace Syn.Speech.Test
 {
