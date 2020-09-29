@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Syn.Speech.Api;
+using Syn.Speech.Logging;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using Syn.Logging;
-using Syn.Speech.Api;
 
 namespace Syn.Speech.Test
 {
