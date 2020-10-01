@@ -43,7 +43,7 @@ namespace Syn.Speech.Tools.Bandwidth
         //Don't care if intensity is very low
         const double LowIntensity = 1e+5;
 
-        private readonly FrontEnd _frontend;
+        private readonly FrontEnds.FrontEnd _frontend;
         private readonly AudioFileDataSource _source;
 
         public BandDetector()
@@ -57,7 +57,7 @@ namespace Syn.Speech.Tools.Bandwidth
 
             var list = new List<IDataProcessor> {_source, windower, fft, filterbank};
 
-            _frontend = new FrontEnd(list);
+            _frontend = new FrontEnds.FrontEnd(list);
         }
 
         public static void Main(string[] args)

@@ -10,6 +10,7 @@ using Syn.Speech.Linguist.Language.NGram;
 using Syn.Speech.Recognizers;
 using Syn.Speech.Results;
 using Syn.Speech.Util;
+
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Api
 {
@@ -58,13 +59,13 @@ namespace Syn.Speech.Api
 
             var aligner = new LongTextAligner(transcript, TupleSize);
             var alignedWords = new Dictionary<int, WordResult>();
-            var ranges = new LinkedList<Range>();
+            var ranges = new LinkedList<Helper.Range>();
             //var texts = new ArrayDeque();
             //var timeFrames = new ArrayDeque();
             var texts = new LinkedList<List<string>>();
             var timeFrames = new LinkedList<TimeFrame>();
 
-            ranges.AddLast(new Range(0, transcript.Count));
+            ranges.AddLast(new Helper.Range(0, transcript.Count));
             texts.Offer(transcript);
             TimeFrame totalTimeFrame = TimeFrame.Infinite;
             timeFrames.Offer(totalTimeFrame);
@@ -194,7 +195,7 @@ namespace Syn.Speech.Api
             this.LogInfo(String.Format("Size {0} deletions {1} insertions {2} error rate {3}", size, insertions, deletions,(insertions + deletions) / ((float)size) * 100f));
         }
 
-        private void ScheduleNextAlignment(List<string> transcript, Dictionary<int, WordResult> alignedWords, LinkedList<Range> ranges, LinkedList<List<string>> texts, LinkedList<TimeFrame> timeFrames, long lastFrame)
+        private void ScheduleNextAlignment(List<string> transcript, Dictionary<int, WordResult> alignedWords, LinkedList<Helper.Range> ranges, LinkedList<List<string>> texts, LinkedList<TimeFrame> timeFrames, long lastFrame)
         {
             int prevKey = -1;
             long prevEnd = 0;
@@ -253,7 +254,7 @@ namespace Syn.Speech.Api
             }
         }
 
-        private void CheckedOffer(List<string> transcript, LinkedList<List<string>> texts, LinkedList<TimeFrame> timeFrames, LinkedList<Range> ranges, int start, int end, long timeStart, long timeEnd)
+        private void CheckedOffer(List<string> transcript, LinkedList<List<string>> texts, LinkedList<TimeFrame> timeFrames, LinkedList<Helper.Range> ranges, int start, int end, long timeStart, long timeEnd)
         {
 
             var wordDensity = ((double)(timeEnd - timeStart)) / (end - start);
@@ -268,7 +269,7 @@ namespace Syn.Speech.Api
 
             texts.Offer(transcript.GetRange(start, end));
             timeFrames.Offer(new TimeFrame(timeStart, timeEnd));
-            ranges.Offer(new Range(start, end - 1));
+            ranges.Offer(new Helper.Range(start, end - 1));
         }
 
         public ITextTokenizer Tokenizer { get; set; }

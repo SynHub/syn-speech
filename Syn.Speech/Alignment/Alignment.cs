@@ -13,7 +13,7 @@ namespace Syn.Speech.Alignment
         private readonly List<Node> _alignment;
         private LongTextAligner _aligner;
 
-        public Alignment(LongTextAligner longTextAligner, List<string> query, Range range)
+        public Alignment(LongTextAligner longTextAligner, List<string> query, Helper.Range range)
         {
             _aligner = longTextAligner;
             Query = query;

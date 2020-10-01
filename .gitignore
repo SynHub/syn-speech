@@ -20,3 +20,8 @@ Syn.Speech.Test/bin/
 Syn.Speech.Test/obj/
 /Syn.Speech.Core/Api/obj
 /Syn.Speech.Core/obj
+/Syn.Speech.Core.Tests/bin/Debug/netcoreapp3.1
+/Syn.Speech.Core.Tests/obj
+/Syn.Speech/bin/Debug/net45
+/Syn.Speech/bin/Debug/netcoreapp3.1
+/Syn.Speech/bin/Release/netcoreapp3.1

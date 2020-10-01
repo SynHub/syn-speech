@@ -3,8 +3,9 @@ using System.Globalization;
 using System.IO;
 using System.Runtime.InteropServices;
 using Syn.Speech.Alignment.Tokenizer;
-using Syn.Speech.Helper;
 using Syn.Speech.Properties;
+using Syn.Speech.Helper;
+//using Syn.Speech.Properties;
 //PATROLLED + REFACTORED
 namespace Syn.Speech.Alignment
 {

@@ -931,7 +931,7 @@ namespace Syn.Speech.Util
         LinkedList<Object> ToList(string s)
         {
             var list = new LinkedList<Object>();
-            var st = new StringTokenizer(s.Trim());
+            var st = new Helper.StringTokenizer(s.Trim());
             while (st.hasMoreTokens())
             {
                 var token = st.nextToken();

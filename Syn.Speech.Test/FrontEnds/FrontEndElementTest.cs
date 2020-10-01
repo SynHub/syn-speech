@@ -57,11 +57,11 @@ namespace Syn.Speech.Test.FrontEnds
             var ds = (AudioFileDataSource)cm.Lookup("audioFileDataSource");
             ds.SetAudioFile(new URL(Helper.FilesDirectory + "/frontend/test-feat.wav"), null);
 
-            var frontend = (FrontEnd)cm.Lookup(frontendName);
+            var frontend = (Speech.FrontEnds.FrontEnd)cm.Lookup(frontendName);
             CompareDump(frontend, name);
         }
 
-        private void CompareDump(FrontEnd frontend, String name)
+        private void CompareDump(Speech.FrontEnds.FrontEnd frontend, String name)
         {
 
             var stream = new URL(name).OpenStream();

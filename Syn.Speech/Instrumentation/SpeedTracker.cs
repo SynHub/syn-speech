@@ -25,7 +25,7 @@ public class SpeedTracker:ConfigurableAdapter,IResultListener, IResetable,IState
     /// <summary>
     /// The property that defines which frontend to monitor.
     /// </summary>
-    [S4Component(Type = typeof(FrontEnd))]
+    [S4Component(Type = typeof(FrontEnds.FrontEnd))]
     public  static string PropFrontend = "frontend";
 
     /// <summary>
@@ -60,7 +60,7 @@ public class SpeedTracker:ConfigurableAdapter,IResultListener, IResetable,IState
     // ------------------------------
     private string _name;
     private Recognizer _recognizer;
-    private FrontEnd _frontEnd;
+    private FrontEnds.FrontEnd _frontEnd;
 
     private bool _showSummary;
     private bool _showDetails;
@@ -79,7 +79,7 @@ public class SpeedTracker:ConfigurableAdapter,IResultListener, IResetable,IState
     private long _totalResponseTime;
 
 
-    public SpeedTracker(Recognizer recognizer, FrontEnd frontEnd, bool showSummary, bool showDetails, bool showResponseTime, bool showTimers) {
+    public SpeedTracker(Recognizer recognizer, FrontEnds.FrontEnd frontEnd, bool showSummary, bool showDetails, bool showResponseTime, bool showTimers) {
         //initLogger();
         InitRecognizer(recognizer);
         InitFrontEnd(frontEnd);
@@ -100,14 +100,14 @@ public class SpeedTracker:ConfigurableAdapter,IResultListener, IResetable,IState
     public override void NewProperties(PropertySheet ps) {
         base.NewProperties(ps);
         InitRecognizer((Recognizer) ps.GetComponent(PropRecognizer));
-        InitFrontEnd((FrontEnd) ps.GetComponent(PropFrontend));
+        InitFrontEnd((FrontEnds.FrontEnd) ps.GetComponent(PropFrontend));
         _showSummary = ps.GetBoolean(PropShowSummary);
         _showDetails = ps.GetBoolean(PropShowDetails);
         _showResponseTime = ps.GetBoolean(PropShowResponseTime);
         _showTimers = ps.GetBoolean(PropShowTimers);
     }
 
-    private void InitFrontEnd(FrontEnd newFrontEnd) {
+    private void InitFrontEnd(FrontEnds.FrontEnd newFrontEnd) {
         if (_frontEnd == null) {
             _frontEnd = newFrontEnd;
             _frontEnd.AddSignalListener(this);

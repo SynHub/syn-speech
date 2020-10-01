@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syn.Speech", "Syn.Speech\Syn.Speech.csproj", "{65B865CF-CDBB-4B84-8BDA-8A4AF1DACFB9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syn.Speech.Test", "Syn.Speech.Test\Syn.Speech.Test.csproj", "{7A4E8087-CE6C-4E88-AD71-ADBEBE90F7D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Syn.Speech.Core", "Syn.Speech.Core\Syn.Speech.Core.csproj", "{867E59C6-DB28-4BCF-A1FB-791276167F2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syn.Speech", "Syn.Speech\Syn.Speech.csproj", "{867E59C6-DB28-4BCF-A1FB-791276167F2A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{65B865CF-CDBB-4B84-8BDA-8A4AF1DACFB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65B865CF-CDBB-4B84-8BDA-8A4AF1DACFB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65B865CF-CDBB-4B84-8BDA-8A4AF1DACFB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65B865CF-CDBB-4B84-8BDA-8A4AF1DACFB9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A4E8087-CE6C-4E88-AD71-ADBEBE90F7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A4E8087-CE6C-4E88-AD71-ADBEBE90F7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A4E8087-CE6C-4E88-AD71-ADBEBE90F7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU

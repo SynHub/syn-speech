@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Syn.Speech.FrontEnds;
+using System;
 
 namespace Syn.Speech.FrontEnd
 {

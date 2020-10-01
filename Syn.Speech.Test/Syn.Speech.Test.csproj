@@ -100,13 +100,13 @@
     <Compile Include="Alignment\UsEnglishWordExpanderTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Syn.Speech\Syn.Speech.csproj">
-      <Project>{65b865cf-cdbb-4b84-8bda-8a4af1dacfb9}</Project>
-      <Name>Syn.Speech</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\Syn.Speech\Syn.Speech.csproj">
+      <Project>{867e59c6-db28-4bcf-a1fb-791276167f2a}</Project>
+      <Name>Syn.Speech</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

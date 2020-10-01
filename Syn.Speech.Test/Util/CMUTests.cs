@@ -14,7 +14,7 @@ namespace Syn.Speech.Test.Util
         [TestMethod]
         public void CMU_ClassTesting()
         {
-            Assert.IsTrue(ConfigurationManagerUtils.IsImplementingInterface(typeof(FrontEnd), typeof(IDataProcessor)));
+            Assert.IsTrue(ConfigurationManagerUtils.IsImplementingInterface(typeof(Speech.FrontEnds.FrontEnd), typeof(IDataProcessor)));
             Assert.IsTrue(ConfigurationManagerUtils.IsImplementingInterface(typeof(IDataProcessor), typeof(IConfigurable)));
             Assert.IsFalse(ConfigurationManagerUtils.IsImplementingInterface(typeof(IConfigurable), typeof(IConfigurable)));
 

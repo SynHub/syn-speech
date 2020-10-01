@@ -19,7 +19,7 @@ using Syn.Speech.Util.Props;
 
         public readonly String FrontendName = "plpFrontEnd";
 
-        private readonly FrontEnd _frontEnd;
+        private readonly FrontEnds.FrontEnd _frontEnd;
         private readonly StreamDataSource _audioSource;
         private ConfigurationManager cm;
 
@@ -28,7 +28,7 @@ using Syn.Speech.Util.Props;
             URL url = new URL(URLType.Resource, Resources.speakerid_frontend_config);
             cm = new ConfigurationManager(url);
             _audioSource = cm.Lookup("streamDataSource") as StreamDataSource;
-            _frontEnd = cm.Lookup(FrontendName) as FrontEnd;
+            _frontEnd = cm.Lookup(FrontendName) as FrontEnds.FrontEnd;
         }
 
         /**
