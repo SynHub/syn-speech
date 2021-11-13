@@ -18,3 +18,9 @@ Syn.Speech/Recognizers/obj/
 Syn.Speech/Util/obj/
 Syn.Speech.Test/bin/
 Syn.Speech.Test/obj/
+
+
+Syn.Speech.Test/bin/Debug/Syn.Speech.Test.exe
+Syn.Speech.Test/bin/Debug/Syn.Speech.Test.pdb
+Syn.Speech.Test/bin/Debug/Syn.Speech.dll
+Syn.Speech.Test/bin/Debug/Syn.Speech.pdb
